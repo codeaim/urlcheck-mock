@@ -1,0 +1,37 @@
+header {
+  padding: 2em 1em;
+  background-color: #f9f9f9;
+
+  a {
+    color: #555555;
+    text-decoration: none;
+  }
+
+  .header-title {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 0.75em;
+
+    .header-color {
+      color: #55CC44;
+    }
+  }
+
+  .header-actions {
+    text-align: center;
+    margin-bottom: 0.5em;
+
+    a {
+      color: #ffffff;
+    }
+
+    .header-action {
+      background-color: #55CC44;
+      padding: 0.5em 1em;
+    }
+  }
+}
+
+
+
