@@ -19,19 +19,12 @@
         <a href="/"><i class="icon-urlcheck"></i><span> urlcheck.</span><span class="header-color">io</span></a>
     </div>
     <div class="header-actions">
-        <a href="/register"><span class="header-action"><i class="fa fa-user"></i> register</span></a>
+        <a href="/login"><span class="header-action"><i class="fa fa-user"></i> login</span></a>
     </div>
 </header>
 <main class="site-content">
-    <div class="login">
-        <section class="social-login">
-            <div>One click sign in/up with one of these providers:</div>
-            <div class="social-login-actions">
-                <a href="#"><i class="fa fa-github"></i> github</a>
-                <a href="#"><i class="fa fa-google"></i> google</a>
-            </div>
-            <div class="social-or"><span>or</span></div>
-        </section>
+    <div class="register">
+        <div class="register-title"><span>new account</span></div>
         <section class="account">
             <form>
                 <div>
@@ -42,21 +35,14 @@
                     <label>Password</label>
                     <input type="password" name="password">
                 </div>
+                <div>
+                    <label>Confirm password</label>
+                    <input type="password" name="confirm-password">
+                </div>
                 <button type="submit">
-                    <i class="fa fa-sign-in"></i> sign in
+                    <i class="fa fa-edit"></i> sign up
                 </button>
             </form>
-        </section>
-        <section class="register">
-            <div class="register-actions">
-                <div><a href="#"><b>No account? Sign up!</b></a></div>
-                <div><a href="#">Didn't receive confirmation instructions?</a></div>
-            </div>
-            <div class="register-details">
-                <div>Trouble signing in? <a href="mailto:gdownes@gmail.com?Subject=urlcheck.io support">Contact support.</a></div>
-                <div>Want to add password login to an existing OAuth account?</div>
-                <div>Enter the email address <a href="#">here to create a password.</a></div>
-            </div>
         </section>
     </div>
 </main>
