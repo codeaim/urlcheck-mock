@@ -52,7 +52,7 @@
             <ul>
                 <li class="check">
                     <div class="url-details">
-                        <i class="fa fa-toggle-off"></i>
+                        <i class="fa fa-toggle-on"></i>
                         <div class="protocol">http</div>
                         <div class="split">://</div>
                         <div class="url">www.google.com</div>
@@ -65,7 +65,7 @@
                 </li>
                 <li class="check">
                     <div class="url-details">
-                        <i class="fa fa-toggle-off"></i>
+                        <i class="fa fa-toggle-on"></i>
                         <div class="protocol">http</div>
                         <div class="split">://</div>
                         <div class="url">www.facebook.com</div>
@@ -76,48 +76,62 @@
                         </span>
                     </div>
                 </li>
+                <li class="check">
+                    <div class="url-details">
+                        <i class="fa fa-toggle-off"></i>
+                        <div class="protocol">http</div>
+                        <div class="split">://</div>
+                        <div class="url">www.facebook.com</div>
+                    </div>
+                    <div class="check-status ">
+                        <span class="check-status-disabled">
+                            disabled
+                        </span>
+                    </div>
+                </li>
             </ul>
             <div class="check-create">
                 <form>
-                    <div class="url-details">
-                        <i class="fa fa-plus"></i>
-                        <div class="protocol">
-                            <select name="protocol" title="protocol">
-                                <option selected="selected" value="http">http</option>
-                                <option value="https">https</option>
-                            </select>
-                        </div>
-                        <div class="split">://</div>
-                        <div class="url">
-                            <input name="url" type="url" placeholder="www.website.com">
-                        </div>
-                    </div>
                     <div class="check-details">
-                        <div class="options">
-                            <div class="alias">
-                                <i class="fa fa-bookmark-o"></i>
-                                <input type="text" placeholder="alias(optional)">
-                            </div>
-                            <div class="interval">
-                                <i class="fa fa-arrows-h"></i>
-                                <label>Interval:</label>
-                                <select name="interval" title="interval">
-                                    <option value="1">1 minute</option>
-                                    <option value="2">2 minute</option>
-                                    <option value="5">5 minute</option>
-                                    <option value="10">10 minute</option>
+                        <div class="url-details">
+                            <i class="fa fa-plus"></i>
+                            <div class="protocol">
+                                <select name="protocol" title="protocol">
+                                    <option selected="selected" value="http">http</option>
+                                    <option value="https">https</option>
                                 </select>
                             </div>
+                            <div class="split">://</div>
+                            <div class="url">
+                                <input name="url" type="url" placeholder="www.website.com">
+                            </div>
                         </div>
-                        <div class="actions">
-                            <div class="save">
-                                <button type="submit">
-                                    <i class="fa fa-save"></i>
-                                </button>
+                        <div class="check-settings">
+                            <div class="options">
+                                <div class="alias">
+                                    <i class="fa fa-bookmark-o"></i>
+                                    <input type="text" placeholder="alias(optional)">
+                                </div>
+                                <div class="interval">
+                                    <i class="fa fa-arrows-h"></i>
+                                    <label>Interval:</label>
+                                    <select name="interval" title="interval">
+                                        <option value="1">1 minute</option>
+                                        <option value="2">2 minute</option>
+                                        <option value="5">5 minute</option>
+                                        <option value="10">10 minute</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <div class="save">
+                                    <button type="submit">
+                                        <i class="fa fa-save"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-
                 </form>
             </div>
         </section>
