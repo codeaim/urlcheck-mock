@@ -1,4 +1,7 @@
 header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 2em 1em;
   background-color: #f9f9f9;
 
@@ -11,7 +14,16 @@ header {
     font-family: 'Lobster', cursive;
     font-size: 2.5em;
     text-align: center;
-    margin-bottom: 0.75em;
+    margin-bottom: 0.5em;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    i {
+      padding-right: 0.25em;
+    }
 
     .header-color {
       color: #55CC44;
@@ -19,6 +31,7 @@ header {
   }
 
   .header-actions {
+    flex: 1;
     text-align: center;
     margin-bottom: 0.5em;
 
@@ -33,10 +46,15 @@ header {
   }
 
   .header-links {
+    flex: 1;
     text-align: center;
 
     a {
       color: #e43;
+
+      &:hover {
+        color: #C42110;
+      }
     }
 
     .header-link {
@@ -49,5 +67,18 @@ header {
   }
 }
 
+@media only screen and (min-width: 701px) {
+  header {
+    flex-direction: row;
+    .header-title {
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    .header-links {
+      text-align: right;
+    }
+  }
+}
 
 
