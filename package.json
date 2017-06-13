@@ -1,0 +1,11 @@
+{
+  "name": "urlcheck-mock",
+  "scripts": {
+    "start": "supervisor app.js",
+    "poststart": "echo \"Start http server at http://localhost:3000\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "supervisor": "^0.12.0"
+  }
+}

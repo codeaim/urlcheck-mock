@@ -1,0 +1,49 @@
+extends layout
+
+prepend content
+    header
+        .navbar
+            .logo
+                a(href='/')
+                    i.icon-urlcheck
+                    | urlcheck.io
+            .actions
+                a(href='/login.html').button
+                    span.icon.icon-login
+                    | sign in
+    main
+        .login
+            .title create account
+            section.account
+                form(id='create-account').no-bottom-margin
+                    .error.hidden
+                    div
+                        label Username
+                            span.error.hidden username already in use
+                        input(id='username', type='text', name='username', placeholder='username' pattern='[\p{L}\p{M}\p{S}\p{N}\p{P}]+' title='Invalid username' required)
+                    div
+                        label Email address
+                            span.error.hidden
+                        input(id='email', type='email', name='email', placeholder='email' required)
+                    div
+                        label Password
+                        input(id='password', type='password', name='password', placeholder='password' pattern='((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,})' title='Password must be eight characters including one uppercase letter, one number and alphanumeric characters' required)
+                    div
+                        label Confirm password
+                        input(id='confirm-password', type='password', name='confirm-password', placeholder="confirm password" required)
+                    span
+                        button(type='submit', form='create-account').button.large
+                            span.icon.icon-person-add
+                            | register
+            section.or
+                | or use
+            section.social
+                a(href='/login.html').button.full.facebook
+                    span.icon.icon-logo-facebook
+                    | facebook
+                a(href='/login.html').button.full.google
+                    span.icon.icon-logo-google-plus
+                    | google
+                a(href='/login.html').button.full.amazon
+                    span.icon.icon-logo-amazon
+                    | amazon

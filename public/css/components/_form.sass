@@ -1,0 +1,44 @@
+form
+  text-align: right
+  margin-bottom: 4em
+
+  input
+    font-size: 1.5em
+    padding: 0.5em 1em
+
+    &::placeholder
+      color: #dddddd
+
+  div
+    padding: 1em 0
+    display: flex
+    flex-direction: column
+
+    &.error
+      .error
+        text-align: left
+        padding: 1em
+        background-color: lighten($red-color, 55%)
+        border: 1px $red-color solid
+        color: $red-color
+        border-radius: 5px
+
+  label
+    text-transform: uppercase
+    text-align: left
+    padding-bottom: 0.5em
+
+    span
+      color: $red-color
+      padding-left: 1em
+      text-transform: none
+
+      a
+        margin-top: 0.5em
+
+    a
+      color: $link-color
+      text-transform: none
+
+      &:hover
+        color: darken($link-color, 20%)

@@ -1,0 +1,26 @@
+extends layout
+
+prepend content
+    header
+        .navbar
+            .logo
+                a(href='/')
+                    i.icon-urlcheck
+                    | urlcheck.io
+            .actions
+                a(href='/login.html').button
+                    span.icon.icon-login
+                    | sign in
+    main
+        .login
+            .title verify email address
+            section.account
+                form(id='verify-email')
+                    .error.hidden
+                    div
+                        label Email address
+                        input(id='email', type='email', name='email', placeholder='email' required)
+                    span
+                        button(type='submit', form='verify-email').button.large
+                            span.icon.icon-person-add
+                            | verify

@@ -1,0 +1,60 @@
+extends layout
+
+prepend content
+    header
+        .navbar
+            .logo
+                a(href='/')
+                    i.icon-urlcheck
+                    | urlcheck.io
+            .actions
+                a(href='/login.html').button
+                    span.icon.icon-login
+                    | sign in
+    main
+        .landing
+            section.intro
+                .title simple website monitoring
+                a(href='/register.html').button.large
+                    span.icon.icon-arrow-right
+                    | try now
+            section.features
+                .feature
+                    .icon.icon-world-refresh
+                    .heading global network
+                    | Worldwide monitoring providing accuracy, insight & reliability
+                .feature
+                    .icon.icon-coin-bank-note
+                    .heading low cost
+                    | Low cost pricing model supporting all major payment options, including cryptocurrencies
+                .feature
+                    .icon.icon-graph-bar-line
+                    .heading Clear reporting
+                    | Clean understandable online availability and performance reports
+                .feature
+                    .icon.icon-check-badge
+                    .heading open source
+                    | Transparent & trustworthy open source monitor
+                .feature
+                    .icon.icon-network-computer-lock
+                    .heading internal network support
+                    | Monitor websites inside your network without firewall configuration
+                .feature
+                    .icon.icon-cog-double
+                    .heading  integration
+                    | Multiple integration options providing flexibility. REST API, webhooks & more..
+            section.pricing
+                .title simple pricing
+                .model
+                    .request
+                        .icon.icon-network
+                        | 1 request
+                    .equals
+                        | =
+                    .credit
+                        .icon.icon-pound-sign-circle
+                        | 1 credit
+                .heading.large 100,000 free credits
+                a(href='/register.html').button.large
+                    span.icon.icon-person-add
+                    | register

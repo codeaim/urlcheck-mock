@@ -1,0 +1,42 @@
+extends layout
+
+prepend content
+    header
+        .navbar
+            .logo
+                a(href='/')
+                    i.icon-urlcheck
+                    | urlcheck.io
+            .actions
+                a(href='/register.html').button
+                    span.icon.icon-person-add
+                    | register
+    main
+        .login
+            .title sign in
+            section.account
+                form.no-bottom-margin
+                    div
+                        label Email address:
+                            a(href='/confirm-email.html').right Confirmed?
+                        input(type='email', name='email', placeholder="email" required)
+                    div
+                        label Password
+                            a(href='/forgot-password.html').right Forgot?
+                        input(type='password', name='password', placeholder="password" required)
+                    span
+                        a(href='/login.html').button.large
+                            span.icon.icon-login
+                            | sign in
+            section.or
+                | or use
+            section.social
+                a(href='/login.html').button.full.facebook
+                    span.icon.icon-logo-facebook
+                    | facebook
+                a(href='/login.html').button.full.google
+                    span.icon.icon-logo-google-plus
+                    | google
+                a(href='/login.html').button.full.amazon
+                    span.icon.icon-logo-amazon
+                    | amazon
