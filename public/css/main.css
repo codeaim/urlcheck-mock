@@ -45,6 +45,57 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-report-problem-circle:before {
+  content: ""; }
+
+.icon-navigation-circle-up:before {
+  content: ""; }
+
+.icon-navigation-circle-help:before {
+  content: ""; }
+
+.icon-navigation-circle-down:before {
+  content: ""; }
+
+.icon-help-circle:before {
+  content: ""; }
+
+.icon-arrow-up:before {
+  content: ""; }
+
+.icon-arrow-down:before {
+  content: ""; }
+
+.icon-expand-horizontal:before {
+  content: ""; }
+
+.icon-download-harddrive:before {
+  content: ""; }
+
+.icon-download:before {
+  content: ""; }
+
+.icon-floppy-disk:before {
+  content: ""; }
+
+.icon-add:before {
+  content: ""; }
+
+.icon-bookmark:before {
+  content: ""; }
+
+.icon-logout:before {
+  content: ""; }
+
+.icon-person:before {
+  content: ""; }
+
+.icon-sort:before {
+  content: ""; }
+
+.icon-search:before {
+  content: ""; }
+
 .icon-logo-google-plus:before {
   content: ""; }
 
@@ -57,11 +108,17 @@
 .icon-person-add:before {
   content: ""; }
 
-.icon-login:before {
-  content: ""; }
+.icon-pound-sign-circle:before {
+  content: ""; }
+
+.icon-network:before {
+  content: ""; }
 
 .icon-arrow-right:before {
   content: ""; }
+
+.icon-login:before {
+  content: ""; }
 
 .icon-world-refresh:before {
   content: ""; }
@@ -80,12 +137,6 @@
 
 .icon-check-badge:before {
   content: ""; }
-
-.icon-pound-sign-circle:before {
-  content: ""; }
-
-.icon-network:before {
-  content: ""; }
 
 html {
   line-height: 1.15;
@@ -2506,7 +2557,7 @@ form {
     font-size: 1.5em;
     padding: 0.5em 1em; }
     form input::placeholder {
-      color: #dddddd; }
+      color: #C8C8C8; }
   form div {
     padding: 1em 0;
     display: flex;
@@ -2546,6 +2597,11 @@ form {
   border-radius: 5px; }
   .button.large {
     font-size: 2em; }
+  .button.round {
+    padding: 0.75em;
+    border-radius: 50px; }
+    .button.round .icon {
+      padding-right: 0; }
   .button.full {
     display: flex; }
   .button:hover {
@@ -2589,6 +2645,17 @@ form {
       margin-right: 0.5em; }
     .navbar .actions a:last-child {
       margin-right: 0; }
+  .navbar .user {
+    display: flex;
+    align-items: center; }
+    .navbar .user .icon {
+      font-size: 1.5em; }
+    .navbar .user a {
+      padding: 0 0.5em;
+      color: #AAAAAA;
+      text-transform: none; }
+      .navbar .user a:hover {
+        color: #777777; }
 
 footer {
   flex: none;
@@ -2669,5 +2736,120 @@ footer {
     background-color: #FF9900; }
     .social a.amazon:hover {
       background-color: #cc7a00; }
+
+.status {
+  text-align: center;
+  border-bottom: 1px #EEEEEE solid; }
+  .status .button {
+    margin-bottom: 1em; }
+
+.filters {
+  padding: 0 2em;
+  display: flex;
+  border-bottom: 1px #EEEEEE solid; }
+  .filters .icon {
+    font-size: 1.5em; }
+  .filters .search {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 0.75em 0; }
+    .filters .search input {
+      font-size: 1em;
+      padding: 0.5em 1em;
+      border: none;
+      min-width: 1em;
+      flex: 1; }
+      .filters .search input::placeholder {
+        color: #C8C8C8; }
+  .filters .sort {
+    display: flex;
+    align-items: center; }
+    .filters .sort select {
+      font-size: 1em;
+      padding: 0.5em 1em;
+      border: none;
+      min-width: 1em;
+      background-color: transparent; }
+
+.checks ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+  .checks ul li {
+    padding: 1em 2em;
+    border-bottom: 1px #EEEEEE solid; }
+    .checks ul li .check-details {
+      display: flex;
+      align-items: center; }
+      .checks ul li .check-details .icon {
+        font-size: 1.5em; }
+    .checks ul li .url-details {
+      display: flex;
+      align-items: center;
+      flex: 1; }
+    .checks ul li .check-status {
+      text-transform: uppercase;
+      font-size: 0.75em; }
+      .checks ul li .check-status .icon {
+        padding-left: 0.5em; }
+
+.check-create {
+  padding: 0 2em;
+  border-bottom: 1px #EEEEEE solid; }
+  .check-create form {
+    margin: 0;
+    padding: 0.5em 0; }
+    .check-create form div {
+      padding: 0;
+      display: block; }
+  .check-create .icon {
+    font-size: 1.5em; }
+  .check-create input {
+    font-size: 1em;
+    padding: 0.5em 1em;
+    border: none;
+    min-width: 1em; }
+    .check-create input::placeholder {
+      color: #C8C8C8; }
+  .check-create select {
+    font-size: 1em;
+    padding: 0.5em 1em;
+    border: none;
+    min-width: 1em;
+    background-color: transparent; }
+  .check-create .url-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.75em 0; }
+    .check-create .url-details select {
+      direction: rtl;
+      padding: 0.5em 0;
+      margin-left: 1em; }
+    .check-create .url-details input {
+      flex: 1;
+      padding: 0.5em 1em 0.5em 0.25em; }
+  .check-create .alias {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.75em 0; }
+    .check-create .alias input {
+      flex: 1; }
+  .check-create .check-settings {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .check-create .check-settings .actions {
+      flex: 1; }
+
+.actions .button {
+  margin-right: -0.75em;
+  color: #AAAAAA;
+  background-color: transparent; }
+  .actions .button:hover {
+    color: #FFFFFF;
+    background-color: #26A65B; }
 
 /*# sourceMappingURL=main.css.map */

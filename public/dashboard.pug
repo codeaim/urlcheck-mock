@@ -1,39 +1,34 @@
-extends ../layout
+extends layout
 
 prepend content
     header
-        .title
-            a(href='/')
-                i.icon-urlcheck
-                span  urlcheck.
-                span.header-color io
-        .links
-            .link
-                | Signed in as
-                a(href='/dashboard')
+        .navbar
+            .logo
+                a(href='/')
+                    i.icon-urlcheck
+                    | urlcheck.io
+            .user
+                span.icon.icon-person
+                a(href='/login.html')
                     | Gerard Downes
-                    i.fa.fa-google
-            .link
-                a(href='/dashboard')
+                |  |
+                a(href='/login.html')
                     | Sign out
-                    i.fa.fa-sign-out
+                span.icon.icon-logout
     main
         .dashboard
-            section.status
-                .status-title Out of credit
-                .status-actions
-                    a(href='/credit')
-                        span.status-action
-                            i.fa.fa-shopping-cart
-                            | Buy credits
+            section.status.hidden
+                .title create your first check
+                a(href='/dashboard.html').button.large.hidden
+                    span.icon.icon-login
+                    | buy credits
             section.checks
                 .filters
                     .search
-                        i.fa.fa-search
-                        input(type='search', placeholder='Search 2 checks')
+                        span.icon.icon-search
+                        input(type='search', size=1 placeholder='Search 2 checks')
                     .sort
-                        i.fa.fa-sort
-                        label Order:
+                        span.icon.icon-sort
                         select#order(name='order')
                             option(selected='selected', value='alias') alias
                             option(value='interval') interval
@@ -43,80 +38,47 @@ prepend content
                 ul
                     li.check.up
                         .check-details
-                            .check-disable
-                                i.fa.fa-toggle-on
                             .url-details
                                 .protocol http
                                 .split ://
                                 .url www.google.com
-                        .check-actions
-                            .check-status
-                                span.check-status-up
-                                    i.fa.fa-arrow-up
-                                    | up
-                            .actions
-                                .delete
-                                    button(type='submit')
-                                        i.fa.fa-trash
+                            span.icon.icon-navigation-circle-up
                     li.check.down
                         .check-details
-                            .check-disable
-                                i.fa.fa-toggle-on
                             .url-details
                                 .protocol http
                                 .split ://
                                 .url www.facebook.com
-                        .check-actions
-                            .check-status
-                                span.check-status-down
-                                    i.fa.fa-arrow-down
-                                    | down
-                            .actions
-                                .delete
-                                    button(type='submit')
-                                        i.fa.fa-trash
+                            span.icon.icon-navigation-circle-down
                     li.check.disabled
                         .check-details
-                            .check-disable
-                                i.fa.fa-toggle-off
                             .url-details
                                 .protocol http
                                 .split ://
                                 .url www.facebook.com
-                        .check-actions
-                            .check-status
-                                span.check-status-disabled
-                                    | disabled
-                            .actions
-                                .delete
-                                    button(type='submit')
-                                        i.fa.fa-trash
+                            span.icon.icon-report-problem-circle
                 .check-create
                     form
-                        .check-details
-                            .url-details
-                                i.fa.fa-plus
-                                .protocol
-                                    select(name='protocol', title='protocol')
-                                        option(selected='selected', value='http') http
-                                        option(value='https') https
-                                .split ://
-                                .url
-                                    input(name='url', type='url', placeholder='www.website.com')
+                        .url-details
+                            span.icon.icon-add
+                            select(name='protocol', title='protocol')
+                                option(selected='selected', value='http') http
+                                option(value='https') https
+                            | ://
+                            input(name='url', type='url', placeholder='www.website.com')
+                        .options
+                            .alias
+                                span.icon.icon-bookmark
+                                input(type='text', placeholder='alias(optional)')
                             .check-settings
-                                .options
-                                    .alias
-                                        i.fa.fa-bookmark-o
-                                        input(type='text', placeholder='alias(optional)')
-                                    .interval
-                                        i.fa.fa-arrows-h
-                                        label Interval:
-                                        select(name='interval', title='interval')
-                                            option(value='1') 1 minute
-                                            option(value='2') 2 minute
-                                            option(value='5') 5 minute
-                                            option(value='10') 10 minute
+                                .interval
+                                    span.icon.icon-expand-horizontal
+                                    select(name='interval', title='interval')
+                                        option(value='1') 1 min
+                                        option(value='2') 2 min
+                                        option(value='5') 5 min
+                                        option(value='10') 10 min
                                 .actions
                                     .save
-                                        button(type='submit')
-                                            i.fa.fa-save
+                                        a(href='/dashboard.html').button.round
+                                            span.icon.icon-download

@@ -1,0 +1,145 @@
+.status
+  text-align: center
+  border-bottom: 1px $border-color solid
+
+  .button
+    margin-bottom: 1em
+
+.filters
+  padding: 0 2em
+  display: flex
+  border-bottom: 1px $border-color solid
+
+  .icon
+    font-size: 1.5em
+
+  .search
+    display: flex
+    align-items: center
+    flex: 1
+    padding: 0.75em 0
+
+    input
+      font-size: 1em
+      padding: 0.5em 1em
+      border: none
+      min-width: 1em
+      flex: 1
+
+      &::placeholder
+        color: $placeholder-color
+
+  .sort
+    display: flex
+    align-items: center
+
+    select
+      font-size: 1em
+      padding: 0.5em 1em
+      border: none
+      min-width: 1em
+      background-color: transparent
+
+.checks
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+    li
+      padding: 1em 2em
+      border-bottom: 1px $border-color solid
+
+      .check-details
+        display: flex
+        align-items: center
+
+        .icon
+          font-size: 1.5em
+
+
+      .url-details
+        display: flex
+        align-items: center
+        flex: 1
+
+      .check-status
+        text-transform: uppercase
+        font-size: 0.75em
+
+        .icon
+          padding-left: 0.5em
+
+.check-create
+  padding: 0 2em
+  border-bottom: 1px $border-color solid
+
+  form
+    margin: 0
+    padding: 0.5em 0
+
+    div
+      padding: 0
+      display: block
+
+  .icon
+    font-size: 1.5em
+
+  input
+    font-size: 1em
+    padding: 0.5em 1em
+    border: none
+    min-width: 1em
+
+    &::placeholder
+      color: $placeholder-color
+
+  select
+    font-size: 1em
+    padding: 0.5em 1em
+    border: none
+    min-width: 1em
+    background-color: transparent
+
+  .url-details
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 0.75em 0
+
+    select
+      direction: rtl
+      padding: 0.5em 0
+      margin-left: 1em
+
+    input
+      flex: 1
+      padding: 0.5em 1em 0.5em 0.25em
+
+  .alias
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 0.75em 0
+
+    input
+      flex: 1
+
+  .check-settings
+    display: flex
+    flex-direction: row
+    align-items: center
+
+    .actions
+      flex: 1
+
+.actions
+  .button
+    margin-right: -0.75em
+    color: $link-color
+    background-color: transparent
+
+    &:hover
+      color: $white-color
+      background-color: $primary-color
+
