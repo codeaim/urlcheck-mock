@@ -2781,6 +2781,10 @@ footer {
     border-bottom: 1px #EEEEEE solid;
     display: flex;
     flex-direction: column; }
+    .checks ul li.check.down {
+      background-color: #fff8f8; }
+    .checks ul li.check.disabled {
+      background-color: #f8f8f8; }
     .checks ul li .check-details {
       display: flex;
       align-items: center; }
