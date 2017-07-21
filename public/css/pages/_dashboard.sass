@@ -49,6 +49,8 @@
     li
       padding: 1em 2em
       border-bottom: 1px $border-color solid
+      display: flex
+      flex-direction: column
 
       .check-details
         display: flex
@@ -56,6 +58,9 @@
 
         .icon
           font-size: 1.5em
+
+        @media only screen and (min-width: $medium-breakpoint)
+          flex: 1
 
 
       .url-details
@@ -70,6 +75,47 @@
         .icon
           padding-left: 0.5em
 
+      .check-uptime
+        display: flex
+        align-items: center
+        padding-top: 1em
+
+        .name
+          text-transform: uppercase
+          font-size: 0.9em
+          color: $link-color
+
+        .uptime-chart
+          flex: 1
+
+          .up
+            height: 2px
+            background-color: $primary-color
+            margin: 0 1em
+          .down
+            height: 2px
+            background-color: $google-color
+            margin: 0 1em
+          .unknown
+            height: 2px
+            background-color: $link-color
+            margin: 0 1em
+
+        .uptime-percent
+          width: 2em
+          text-transform: uppercase
+          font-size: 0.9em
+          color: $link-color
+
+        @media only screen and (min-width: $medium-breakpoint)
+          flex: 1
+          padding-top: 0
+          padding-left: 2em
+
+      @media only screen and (min-width: $medium-breakpoint)
+        flex-direction: row
+
+
 .check-create
   padding: 0 2em
   border-bottom: 1px $border-color solid
@@ -77,10 +123,15 @@
   form
     margin: 0
     padding: 0.5em 0
+    display: flex
+    flex-direction: column
 
     div
       padding: 0
-      display: block
+      display: flex
+
+    @media only screen and (min-width: $large-breakpoint)
+      flex-direction: row
 
   .icon
     font-size: 1.5em
@@ -116,6 +167,18 @@
       flex: 1
       padding: 0.5em 1em 0.5em 0.25em
 
+    @media only screen and (min-width: $large-breakpoint)
+      flex: 2
+
+  .options
+    flex-direction: column
+
+    @media only screen and (min-width: $medium-breakpoint)
+      flex-direction: row
+
+    @media only screen and (min-width: $large-breakpoint)
+      flex: 3
+
   .alias
     display: flex
     flex-direction: row
@@ -125,21 +188,33 @@
     input
       flex: 1
 
+    @media only screen and (min-width: $medium-breakpoint)
+      flex: 1
+
   .check-settings
     display: flex
     flex-direction: row
     align-items: center
 
+    .interval
+      flex-direction: row
+      align-items: center
+
     .actions
       flex: 1
+      align-items: flex-end
 
-.actions
-  .button
-    margin-right: -0.75em
-    color: $link-color
-    background-color: transparent
+      .button
+        margin-right: -0.75em
+        color: $link-color
+        background-color: transparent
 
-    &:hover
-      color: $white-color
-      background-color: $primary-color
+        &:hover
+          color: $white-color
+          background-color: $primary-color
+
+    @media only screen and (min-width: $medium-breakpoint)
+      flex: 1
+
+
 

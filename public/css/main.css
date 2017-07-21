@@ -2522,7 +2522,7 @@ template {
   clip: auto; }
 
 body {
-  font: normal 16px "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font: normal 14px "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   display: flex;
   flex-direction: column;
   height: 100%; }
@@ -2778,12 +2778,17 @@ footer {
   margin: 0; }
   .checks ul li {
     padding: 1em 2em;
-    border-bottom: 1px #EEEEEE solid; }
+    border-bottom: 1px #EEEEEE solid;
+    display: flex;
+    flex-direction: column; }
     .checks ul li .check-details {
       display: flex;
       align-items: center; }
       .checks ul li .check-details .icon {
         font-size: 1.5em; }
+      @media only screen and (min-width: 701px) {
+        .checks ul li .check-details {
+          flex: 1; } }
     .checks ul li .url-details {
       display: flex;
       align-items: center;
@@ -2793,16 +2798,56 @@ footer {
       font-size: 0.75em; }
       .checks ul li .check-status .icon {
         padding-left: 0.5em; }
+    .checks ul li .check-uptime {
+      display: flex;
+      align-items: center;
+      padding-top: 1em; }
+      .checks ul li .check-uptime .name {
+        text-transform: uppercase;
+        font-size: 0.9em;
+        color: #AAAAAA; }
+      .checks ul li .check-uptime .uptime-chart {
+        flex: 1; }
+        .checks ul li .check-uptime .uptime-chart .up {
+          height: 2px;
+          background-color: #26A65B;
+          margin: 0 1em; }
+        .checks ul li .check-uptime .uptime-chart .down {
+          height: 2px;
+          background-color: #DD4B39;
+          margin: 0 1em; }
+        .checks ul li .check-uptime .uptime-chart .unknown {
+          height: 2px;
+          background-color: #AAAAAA;
+          margin: 0 1em; }
+      .checks ul li .check-uptime .uptime-percent {
+        width: 2em;
+        text-transform: uppercase;
+        font-size: 0.9em;
+        color: #AAAAAA; }
+      @media only screen and (min-width: 701px) {
+        .checks ul li .check-uptime {
+          flex: 1;
+          padding-top: 0;
+          padding-left: 2em; } }
+    @media only screen and (min-width: 701px) {
+      .checks ul li {
+        flex-direction: row; } }
 
 .check-create {
   padding: 0 2em;
   border-bottom: 1px #EEEEEE solid; }
   .check-create form {
     margin: 0;
-    padding: 0.5em 0; }
+    padding: 0.5em 0;
+    display: flex;
+    flex-direction: column; }
     .check-create form div {
       padding: 0;
-      display: block; }
+      display: flex; }
+    @media only screen and (min-width: 1200px) {
+      .check-create form {
+        flex-direction: row; } }
   .check-create .icon {
     font-size: 1.5em; }
   .check-create input {
@@ -2830,6 +2875,17 @@ footer {
     .check-create .url-details input {
       flex: 1;
       padding: 0.5em 1em 0.5em 0.25em; }
+    @media only screen and (min-width: 1200px) {
+      .check-create .url-details {
+        flex: 2; } }
+  .check-create .options {
+    flex-direction: column; }
+    @media only screen and (min-width: 701px) {
+      .check-create .options {
+        flex-direction: row; } }
+    @media only screen and (min-width: 1200px) {
+      .check-create .options {
+        flex: 3; } }
   .check-create .alias {
     display: flex;
     flex-direction: row;
@@ -2837,19 +2893,28 @@ footer {
     padding: 0.75em 0; }
     .check-create .alias input {
       flex: 1; }
+    @media only screen and (min-width: 701px) {
+      .check-create .alias {
+        flex: 1; } }
   .check-create .check-settings {
     display: flex;
     flex-direction: row;
     align-items: center; }
+    .check-create .check-settings .interval {
+      flex-direction: row;
+      align-items: center; }
     .check-create .check-settings .actions {
-      flex: 1; }
-
-.actions .button {
-  margin-right: -0.75em;
-  color: #AAAAAA;
-  background-color: transparent; }
-  .actions .button:hover {
-    color: #FFFFFF;
-    background-color: #26A65B; }
+      flex: 1;
+      align-items: flex-end; }
+      .check-create .check-settings .actions .button {
+        margin-right: -0.75em;
+        color: #AAAAAA;
+        background-color: transparent; }
+        .check-create .check-settings .actions .button:hover {
+          color: #FFFFFF;
+          background-color: #26A65B; }
+    @media only screen and (min-width: 701px) {
+      .check-create .check-settings {
+        flex: 1; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -43,6 +43,11 @@ prepend content
                                 .split ://
                                 .url www.google.com
                             span.icon.icon-navigation-circle-up
+                        .check-uptime
+                            span.name uptime
+                            .uptime-chart
+                                .up
+                            span.uptime-percent 100%
                     li.check.down
                         .check-details
                             .url-details
@@ -50,6 +55,11 @@ prepend content
                                 .split ://
                                 .url www.facebook.com
                             span.icon.icon-navigation-circle-down
+                        .check-uptime
+                            span.name uptime
+                            .uptime-chart
+                                .down
+                            span.uptime-percent 0%
                     li.check.disabled
                         .check-details
                             .url-details
@@ -57,6 +67,11 @@ prepend content
                                 .split ://
                                 .url www.facebook.com
                             span.icon.icon-report-problem-circle
+                        .check-uptime
+                            span.name uptime
+                            .uptime-chart
+                                .unknown
+                            span.uptime-percent 100%
                 .check-create
                     form
                         .url-details
