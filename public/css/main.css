@@ -2807,19 +2807,21 @@ footer {
         font-size: 0.9em;
         color: #AAAAAA; }
       .checks ul li .check-uptime .uptime-chart {
-        flex: 1; }
+        display: flex;
+        flex: 1;
+        margin: 0 1em; }
         .checks ul li .check-uptime .uptime-chart .up {
           height: 2px;
           background-color: #26A65B;
-          margin: 0 1em; }
+          flex: 1; }
         .checks ul li .check-uptime .uptime-chart .down {
           height: 2px;
           background-color: #DD4B39;
-          margin: 0 1em; }
+          flex: 1; }
         .checks ul li .check-uptime .uptime-chart .unknown {
           height: 2px;
           background-color: #AAAAAA;
-          margin: 0 1em; }
+          flex: 1; }
       .checks ul li .check-uptime .uptime-percent {
         width: 2em;
         text-transform: uppercase;

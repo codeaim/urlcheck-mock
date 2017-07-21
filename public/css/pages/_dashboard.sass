@@ -86,20 +86,22 @@
           color: $link-color
 
         .uptime-chart
+          display: flex
           flex: 1
+          margin: 0 1em
 
           .up
             height: 2px
             background-color: $primary-color
-            margin: 0 1em
+            flex: 1
           .down
             height: 2px
             background-color: $google-color
-            margin: 0 1em
+            flex: 1
           .unknown
             height: 2px
             background-color: $link-color
-            margin: 0 1em
+            flex: 1
 
         .uptime-percent
           width: 2em
