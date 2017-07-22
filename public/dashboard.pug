@@ -37,56 +37,92 @@ prepend content
                             option(value='url') url
                 ul
                     li.check.up
-                        .check-details
-                            .url-details
-                                .protocol http
-                                .split ://
-                                .url www.google.com
-                            span.icon.icon-navigation-circle-up
-                        .check-uptime
-                            span.name uptime
-                            .uptime-chart
-                                .up
-                            span.uptime-percent 100%
+                        .check-overview
+                            .check-details
+                                .url-details
+                                    .protocol http
+                                    .split ://
+                                    .url www.google.com
+                                span.icon.icon-navigation-circle-up
+                            .check-uptime
+                                span.name uptime
+                                .uptime-chart
+                                    .up
+                                span.uptime-percent 100%
+                        .check-settings
+                            .check-traits
+                                span.icon.icon-expand-horizontal
+                                | 1 min
+                            .check-actions
+                                .delete
+                                    a(href='').button.round
+                                        span.icon.icon-bin
                     li.check.down
-                        .check-details
-                            .url-details
-                                .protocol http
-                                .split ://
-                                .url www.facebook.com
-                            span.icon.icon-navigation-circle-down
-                        .check-uptime
-                            span.name uptime
-                            .uptime-chart
-                                .down
-                            span.uptime-percent 0%
+                        .check-overview
+                            .check-details
+                                .url-details
+                                    .protocol http
+                                    .split ://
+                                    .url www.facebook.com
+                                span.icon.icon-navigation-circle-down
+                            .check-uptime
+                                span.name uptime
+                                .uptime-chart
+                                    .down
+                                span.uptime-percent 0%
+                        .check-settings
+                            .check-traits
+                                span.icon.icon-expand-horizontal
+                                | 1 min
+                            .check-actions
+                                .delete
+                                    a(href='').button.round
+                                        span.icon.icon-bin
                     li.check.disabled
-                        .check-details
-                            .url-details
-                                .protocol http
-                                .split ://
-                                .url www.facebook.com
-                            span.icon.icon-report-problem-circle
-                        .check-uptime
-                            span.name uptime
-                            .uptime-chart
-                                .unknown
-                            span.uptime-percent 100%
+                        .check-overview
+                            .check-details
+                                .url-details
+                                    .protocol http
+                                    .split ://
+                                    .url www.facebook.com
+                                span.icon.icon-report-problem-circle
+                            .check-uptime
+                                span.name uptime
+                                .uptime-chart
+                                    .unknown
+                                span.uptime-percent 100%
+                        .check-settings
+                            .check-traits
+                                span.icon.icon-expand-horizontal
+                                | 1 min
+                            .check-actions
+                                .delete
+                                    a(href='').button.round
+                                        span.icon.icon-bin
                     li.check.up
-                        .check-details
-                            .url-details
-                                .protocol http
-                                .split ://
-                                .url www.youtube.com
-                            span.icon.icon-navigation-circle-up
-                        .check-uptime
-                            span.name uptime
-                            .uptime-chart
-                                .unknown
-                                .up
-                                .down
-                                .up
-                            span.uptime-percent 66%
+                        .check-overview
+                            .check-details
+                                .url-details
+                                    .protocol http
+                                    .split ://
+                                    .url www.youtube.com
+                                span.icon.icon-navigation-circle-up
+                            .check-uptime
+                                span.name uptime
+                                .uptime-chart
+                                    .unknown
+                                    .up
+                                    .down
+                                    .up
+                                span.uptime-percent 66%
+                        .check-settings
+                            .check-traits
+                                span.icon.icon-expand-horizontal
+                                | 1 min
+                            .check-actions
+                                .delete
+                                    a(href='').button.round
+                                        span.icon.icon-bin
                 .check-create
                     form
                         .url-details

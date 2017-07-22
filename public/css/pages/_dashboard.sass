@@ -52,21 +52,33 @@
       display: flex
       flex-direction: column
 
-      &.check.down
+      @media only screen and (min-width: $large-breakpoint)
+        flex-direction: row
+
+      &.down
         background-color: #fff8f8
-      &.check.disabled
+      &.disabled
         background-color: #f8f8f8
+
+      .check-overview
+        display: flex
+        flex-direction: column
+
+        @media only screen and (min-width: $medium-breakpoint)
+          flex-direction: row
+
+        @media only screen and (min-width: $large-breakpoint)
+          flex: 3
 
       .check-details
         display: flex
         align-items: center
 
-        .icon
-          font-size: 1.5em
-
         @media only screen and (min-width: $medium-breakpoint)
           flex: 1
 
+        .icon
+          font-size: 1.5em
 
       .url-details
         display: flex
@@ -84,6 +96,11 @@
         display: flex
         align-items: center
         padding-top: 1em
+
+        @media only screen and (min-width: $medium-breakpoint)
+          flex: 1
+          padding-top: 0
+          padding-left: 2em
 
         .name
           text-transform: uppercase
@@ -114,14 +131,42 @@
           font-size: 0.9em
           color: $link-color
 
-        @media only screen and (min-width: $medium-breakpoint)
+      .check-settings
+        display: flex
+        padding-top: 1em
+
+        @media only screen and (min-width: $large-breakpoint)
           flex: 1
           padding-top: 0
           padding-left: 2em
 
-      @media only screen and (min-width: $medium-breakpoint)
-        flex-direction: row
 
+      .check-traits
+        display: flex
+        align-items: center
+        flex: 1
+
+        .icon
+          padding-right: 0.5em
+          font-size: 1.5em
+
+      .check-actions
+        display: flex
+        align-items: center
+
+        .delete
+          padding-left: 1em
+
+        .button
+          margin-right: -0.75em
+          margin-top: -0.75em
+          margin-bottom: -0.75em
+          color: $link-color
+          background-color: transparent
+
+          &:hover
+            color: $white-color
+            background-color: $google-color
 
 .check-create
   padding: 0 2em
@@ -132,13 +177,12 @@
     padding: 0.5em 0
     display: flex
     flex-direction: column
+    @media only screen and (min-width: $large-breakpoint)
+      flex-direction: row
 
     div
       padding: 0
       display: flex
-
-    @media only screen and (min-width: $large-breakpoint)
-      flex-direction: row
 
   .icon
     font-size: 1.5em
@@ -165,6 +209,9 @@
     align-items: center
     padding: 0.75em 0
 
+    @media only screen and (min-width: $large-breakpoint)
+      flex: 2
+
     select
       direction: rtl
       padding: 0.5em 0
@@ -173,9 +220,6 @@
     input
       flex: 1
       padding: 0.5em 1em 0.5em 0.25em
-
-    @media only screen and (min-width: $large-breakpoint)
-      flex: 2
 
   .options
     flex-direction: column
@@ -203,6 +247,9 @@
     flex-direction: row
     align-items: center
 
+    @media only screen and (min-width: $medium-breakpoint)
+      flex: 1
+
     .interval
       flex-direction: row
       align-items: center
@@ -220,8 +267,7 @@
           color: $white-color
           background-color: $primary-color
 
-    @media only screen and (min-width: $medium-breakpoint)
-      flex: 1
+
 
 
 

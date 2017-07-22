@@ -45,6 +45,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-bin:before {
+  content: ""; }
+
 .icon-report-problem-circle:before {
   content: ""; }
 
@@ -2781,18 +2784,30 @@ footer {
     border-bottom: 1px #EEEEEE solid;
     display: flex;
     flex-direction: column; }
-    .checks ul li.check.down {
+    @media only screen and (min-width: 1200px) {
+      .checks ul li {
+        flex-direction: row; } }
+    .checks ul li.down {
       background-color: #fff8f8; }
-    .checks ul li.check.disabled {
+    .checks ul li.disabled {
       background-color: #f8f8f8; }
+    .checks ul li .check-overview {
+      display: flex;
+      flex-direction: column; }
+      @media only screen and (min-width: 701px) {
+        .checks ul li .check-overview {
+          flex-direction: row; } }
+      @media only screen and (min-width: 1200px) {
+        .checks ul li .check-overview {
+          flex: 3; } }
     .checks ul li .check-details {
       display: flex;
       align-items: center; }
-      .checks ul li .check-details .icon {
-        font-size: 1.5em; }
       @media only screen and (min-width: 701px) {
         .checks ul li .check-details {
           flex: 1; } }
+      .checks ul li .check-details .icon {
+        font-size: 1.5em; }
     .checks ul li .url-details {
       display: flex;
       align-items: center;
@@ -2806,6 +2821,11 @@ footer {
       display: flex;
       align-items: center;
       padding-top: 1em; }
+      @media only screen and (min-width: 701px) {
+        .checks ul li .check-uptime {
+          flex: 1;
+          padding-top: 0;
+          padding-left: 2em; } }
       .checks ul li .check-uptime .name {
         text-transform: uppercase;
         font-size: 0.9em;
@@ -2831,14 +2851,35 @@ footer {
         text-transform: uppercase;
         font-size: 0.9em;
         color: #AAAAAA; }
-      @media only screen and (min-width: 701px) {
-        .checks ul li .check-uptime {
+    .checks ul li .check-settings {
+      display: flex;
+      padding-top: 1em; }
+      @media only screen and (min-width: 1200px) {
+        .checks ul li .check-settings {
           flex: 1;
           padding-top: 0;
           padding-left: 2em; } }
-    @media only screen and (min-width: 701px) {
-      .checks ul li {
-        flex-direction: row; } }
+    .checks ul li .check-traits {
+      display: flex;
+      align-items: center;
+      flex: 1; }
+      .checks ul li .check-traits .icon {
+        padding-right: 0.5em;
+        font-size: 1.5em; }
+    .checks ul li .check-actions {
+      display: flex;
+      align-items: center; }
+      .checks ul li .check-actions .delete {
+        padding-left: 1em; }
+      .checks ul li .check-actions .button {
+        margin-right: -0.75em;
+        margin-top: -0.75em;
+        margin-bottom: -0.75em;
+        color: #AAAAAA;
+        background-color: transparent; }
+        .checks ul li .check-actions .button:hover {
+          color: #FFFFFF;
+          background-color: #DD4B39; }
 
 .check-create {
   padding: 0 2em;
@@ -2848,12 +2889,12 @@ footer {
     padding: 0.5em 0;
     display: flex;
     flex-direction: column; }
-    .check-create form div {
-      padding: 0;
-      display: flex; }
     @media only screen and (min-width: 1200px) {
       .check-create form {
         flex-direction: row; } }
+    .check-create form div {
+      padding: 0;
+      display: flex; }
   .check-create .icon {
     font-size: 1.5em; }
   .check-create input {
@@ -2874,6 +2915,9 @@ footer {
     flex-direction: row;
     align-items: center;
     padding: 0.75em 0; }
+    @media only screen and (min-width: 1200px) {
+      .check-create .url-details {
+        flex: 2; } }
     .check-create .url-details select {
       direction: rtl;
       padding: 0.5em 0;
@@ -2881,9 +2925,6 @@ footer {
     .check-create .url-details input {
       flex: 1;
       padding: 0.5em 1em 0.5em 0.25em; }
-    @media only screen and (min-width: 1200px) {
-      .check-create .url-details {
-        flex: 2; } }
   .check-create .options {
     flex-direction: column; }
     @media only screen and (min-width: 701px) {
@@ -2906,6 +2947,9 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center; }
+    @media only screen and (min-width: 701px) {
+      .check-create .check-settings {
+        flex: 1; } }
     .check-create .check-settings .interval {
       flex-direction: row;
       align-items: center; }
@@ -2919,8 +2963,5 @@ footer {
         .check-create .check-settings .actions .button:hover {
           color: #FFFFFF;
           background-color: #26A65B; }
-    @media only screen and (min-width: 701px) {
-      .check-create .check-settings {
-        flex: 1; } }
 
 /*# sourceMappingURL=main.css.map */
